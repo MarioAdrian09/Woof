@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.sp
 import com.example.woof.ui.theme.Typography
 
 val AbrilFatface = FontFamily(
-    Font(R.font.abrilFatface_regular)
+    Font(R.font.abrilfatface_regular)
 )
 val Montserrat = FontFamily(
     Font(R.font.montserrat_regular),
