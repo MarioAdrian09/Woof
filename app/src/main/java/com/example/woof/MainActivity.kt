@@ -71,21 +71,22 @@ class MainActivity : ComponentActivity() {
  */
 @Composable
 fun WoofApp() {
-    @Composable
-    fun WoofApp() {
-        Scaffold { it ->
-            LazyColumn(contentPadding = it) {
-                items(dogs) {
-                    DogItem(
-                        dog = it,
-                        modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
-                    )
-                }
+    Scaffold (
+        topBar = {
+            WoofTopAppBar()
+        }
+    ){ it ->
+
+        LazyColumn(contentPadding = it) {
+            items(dogs) {
+                DogItem(
+                    dog = it,
+                    modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
+                )
             }
         }
     }
 }
-
 /**
  * Composable that displays a list item containing a dog icon and their information.
  *
@@ -195,6 +196,7 @@ fun WoofPreview() {
         WoofApp()
     }
 }
+
 @Preview
 @Composable
 fun WoofDarkThemePreview() {
